@@ -1,0 +1,804 @@
+{
+	"info": {
+		"_postman_id": "734a1cf8-5e24-4ff9-8f1d-1ff0c5713435",
+		"name": "customer-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Accounts",
+			"item": [
+				{
+					"name": "sign-up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"abela\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/accounts/signup/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts",
+								"signup",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"abel\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/accounts/login/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "services",
+			"item": [
+				{
+					"name": "Organizations",
+					"item": [
+						{
+							"name": "get-organizations",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/services/organizations/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"services",
+										"organizations",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add-organization",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"category\": \"hotel\",\n    \"name\": \"club name 1\",\n    \"open\": \"21:00:00\",\n    \"close\": \"21:00:00\",\n    \"user\": \"f34e74de-9ed7-4889-bee3-d3cd9098bba5\",\n    \"location\": \"Ethiopika\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/services/organizations/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"services",
+										"organizations",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update-organization",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"New Organization NAme\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/services/organization/6ICRQ67T17/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"services",
+										"organization",
+										"6ICRQ67T17",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-organization",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/services/organization/6ICRQ67T17/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"services",
+										"organization",
+										"6ICRQ67T17",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-organization-details",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/services/organization/ZGS3LBIOWJ/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"services",
+										"organization",
+										"ZGS3LBIOWJ",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-organzation-reviews",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/services/organization-review/?org=ZGS3LBIOWJ",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"services",
+										"organization-review",
+										""
+									],
+									"query": [
+										{
+											"key": "org",
+											"value": "ZGS3LBIOWJ"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add-organization-review",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"rate\": 1,\n    \"organization\": \"ZGS3LBIOWJ\",\n    \"by\": \"f34e74de-9ed7-4889-bee3-d3cd9098bba5\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/services/organization-review/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"services",
+										"organization-review",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update-organization-review",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"comment\": \"new comment\",\n    \"is_verified\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/services/organization-review/LLOSKC0FP2/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"services",
+										"organization-review",
+										"LLOSKC0FP2",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-oranization-review",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/services/organization-review/7RRVO7ZJGB/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"services",
+										"organization-review",
+										"7RRVO7ZJGB",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "category",
+					"item": [
+						{
+							"name": "get-categories",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/services/category/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"services",
+										"category",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add-categories",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"food\",\n    \"description\": \"ethiopian foods\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/services/category/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"services",
+										"category",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update-category",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"description\": \"updated description text\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/services/category/hotel/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"services",
+										"category",
+										"hotel",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-cateory",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/services/category/hotel/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"services",
+										"category",
+										"hotel",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Rental-Category",
+					"item": [
+						{
+							"name": "get-rental-categories",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/services/rental-category/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"services",
+										"rental-category",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add-rental-categories",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"food\",\n    \"description\": \"ethiopian foods\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/services/rental-category/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"services",
+										"rental-category",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update-rental-category",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"description\": \"updated description text\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/services/rental-category/food/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"services",
+										"rental-category",
+										"food",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-rental-cateory",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/services/rental-category/food/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"services",
+										"rental-category",
+										"food",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Rental-Services",
+					"item": [
+						{
+							"name": "get-rental-services",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/services/rental-service/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"services",
+										"rental-service",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add-rental-services",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Some Name Here\",\n    \"price\": 1222,\n    \"location\": \"ethiopia\",\n    \"category\": \"food\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/services/rental-services/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"services",
+										"rental-services",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update-rental-servise",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"new name\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/services/rental-services/6600e651-7941-481f-a62e-eb5b0a06a70d/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"services",
+										"rental-services",
+										"6600e651-7941-481f-a62e-eb5b0a06a70d",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-rental-service",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/services/rental-services/6600e651-7941-481f-a62e-eb5b0a06a70d/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"services",
+										"rental-services",
+										"6600e651-7941-481f-a62e-eb5b0a06a70d",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Organization-Gallery",
+					"item": [
+						{
+							"name": "get-organization-images",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/services/organization-gallery/?org=HUX21XFGXW",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"services",
+										"organization-gallery",
+										""
+									],
+									"query": [
+										{
+											"key": "org",
+											"value": "HUX21XFGXW"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add-organization-image",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "organization",
+											"value": "HUX21XFGXW",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/home/abel/Downloads/wLgJdaZ.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/services/organization-gallery/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"services",
+										"organization-gallery",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-organization-image",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/services/organization-gallery/3d5f3509-4775-44d5-a848-6b7ac8fdc445/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"services",
+										"organization-gallery",
+										"3d5f3509-4775-44d5-a848-6b7ac8fdc445",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Rental-Service-Gallery",
+					"item": [
+						{
+							"name": "get-rental-images",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/services/rental-service-gallery/?ren=d9374d72-3468-406a-b931-35cd78d055db",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"services",
+										"rental-service-gallery",
+										""
+									],
+									"query": [
+										{
+											"key": "ren",
+											"value": "d9374d72-3468-406a-b931-35cd78d055db"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add-rental-image",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "rental_service",
+											"value": "14f5cfde-37a6-42d2-8c7c-11fa0b5c8b5b",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/home/abel/Downloads/wLgJdaZ.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/services/rental-service-gallery/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"services",
+										"rental-service-gallery",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-rental-image",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/services/rental-service-gallery/ebe2ef00-0381-407e-891f-10e20f22a5e5/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"services",
+										"rental-service-gallery",
+										"ebe2ef00-0381-407e-891f-10e20f22a5e5",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "Token {{token}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "Authorization",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

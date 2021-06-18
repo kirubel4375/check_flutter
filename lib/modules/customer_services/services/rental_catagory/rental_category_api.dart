@@ -1,0 +1,12 @@
+
+
+class RentalCategory{
+
+
+  addRentalCategory(){
+
+  }
+  getRentalCategory(){
+
+  }
+}
